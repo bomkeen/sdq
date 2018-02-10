@@ -1,8 +1,14 @@
 <?php
 
-/* @var $this yii\web\View */
+use yii\helpers\Html;
 
-$this->title = 'My Yii Application';
+
+/* @var $this yii\web\View */
+/* @var $model app\models\ClinicQ */
+
+$this->title = 'Create Clinic Q';
+$this->params['breadcrumbs'][] = ['label' => 'Clinic Qs', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-index">
 
@@ -16,7 +22,9 @@ $this->title = 'My Yii Application';
                     เรียกคิว clinic
                 </div>
                 <div class="panel-body">
-                    
+                     <?= $this->render('_form', [
+        'model' => $model,
+    ]) ?>
                 </div>
                 <div class="panel-footer">
                     
@@ -40,3 +48,4 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
+
